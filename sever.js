@@ -40,7 +40,7 @@ modules.forEach(function(module) {
     files.forEach(function(file) {
       if (!file.endsWith(".js")) return;
       let command = require(`./commands/${module}/${file}`);
-      console.log(`${command.name} Command Has Been Loaded - ✅`);
+      console.log(`${command.name} Command Has Been Loaded - `);
       if (command.name) client.commands.set(command.name, command);
       if (command.aliases) {
         command.aliases.forEach(alias =>
